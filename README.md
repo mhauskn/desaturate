@@ -14,7 +14,6 @@ by design.
 |---|---|
 | [`desaturate/`](desaturate/) | The extension source (MV3). See its README for architecture and local-install steps. |
 | [`store-assets/`](store-assets/) | Chrome Web Store listing assets: icon, screenshots, promo tiles, listing copy. |
-| [`facebook-color-drain/`](facebook-color-drain/) | The original three-file prototype that started this (Facebook-only, hardcoded). |
 
 ## Links
 
