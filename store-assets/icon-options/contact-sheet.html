@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Desaturate — store icon options</title>
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #e9e9e9; padding: 40px; }
+  h1 { font-size: 24px; margin-bottom: 4px; }
+  .sub { color: #666; margin-bottom: 28px; }
+  .option { display: flex; align-items: center; gap: 24px; margin-bottom: 20px; }
+  .meta { width: 150px; }
+  .meta b { display: block; font-size: 16px; }
+  .meta span { color: #777; font-size: 13px; }
+  .swatch { display: flex; align-items: center; gap: 20px; padding: 18px 24px; border-radius: 12px; }
+  .light { background: #fff; border: 1px solid #ddd; }
+  .dark { background: #202124; }
+  img { image-rendering: auto; }
+</style>
+</head>
+<body>
+  <h1>Desaturate — store icon options</h1>
+  <p class="sub">Each shown at 128 / 48 / 16 px on light and dark, matching how the Web Store and Chrome UI display it.</p>
+  <div id="sheet"></div>
+  <script>
+    const options = [
+      ['c-drained', 'C — old pick', 'for reference: the low-contrast one'],
+      ['f-tile-circle', 'F — Tile + circle', 'drained circle on a dark tile'],
+      ['g-big-circle', 'G — Big circle', '112px circle, slate top, stroke + glow'],
+      ['h-tile-wave', 'H — Tile wave', 'whole tile is the drained scene'],
+      ['i-tile-droplet', 'I — Tile droplet', 'fading droplet on a dark tile'],
+    ];
+    const sheet = document.getElementById('sheet');
+    for (const [file, name, desc] of options) {
+      const row = document.createElement('div');
+      row.className = 'option';
+      const imgs = [128, 48, 16].map(s => `<img src="${file}.png" width="${s}" height="${s}">`).join('');
+      row.innerHTML = `<div class="meta"><b>${name}</b><span>${desc}</span></div>
+        <div class="swatch light">${imgs}</div>
+        <div class="swatch dark">${imgs}</div>`;
+      sheet.append(row);
+    }
+  </script>
+</body>
+</html>

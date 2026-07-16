@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Desaturate — Options</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <h1>Desaturate options</h1>
+    <p class="tagline">You found the settings. If you're here to give a site
+    its color back, take a breath first — that's exactly the urge this
+    extension exists to interrupt.</p>
+
+    <h2>Common sites</h2>
+    <div id="grid" class="grid"></div>
+
+    <h2>Custom sites</h2>
+    <div id="custom-list"></div>
+    <p id="custom-empty" class="hint">No custom sites yet.</p>
+    <form id="add-form" class="add-form">
+      <input id="add-input" type="text" placeholder="e.g. news.ycombinator.com" spellcheck="false">
+      <button type="submit">Desaturate it</button>
+    </form>
+    <p id="error" class="error" hidden></p>
+  </main>
+  <script src="common.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

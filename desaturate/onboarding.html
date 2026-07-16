@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Welcome to Desaturate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section id="setup">
+      <h1>Desaturate</h1>
+      <p class="tagline">Doomscrolling runs on color. Pick the sites that pull you in — from now on, they'll be gray.</p>
+
+      <div id="grid" class="grid"></div>
+
+      <p class="hint">You can add any other site later from the extension's options page.</p>
+
+      <button id="go" class="primary">Desaturate selected sites</button>
+      <p id="error" class="error" hidden></p>
+    </section>
+
+    <section id="done" hidden>
+      <h1>Done. Enjoy the gray.</h1>
+      <p>Your selected sites are now colorless — including any tabs you already
+      have open. No reload needed.</p>
+      <p class="fine-print">
+        There is no toolbar button and no quick toggle — that's the point.
+        To change your sites, go to <strong>chrome://extensions</strong> →
+        <strong>Desaturate</strong> → <strong>Details</strong> →
+        <strong>Extension options</strong>. It's deliberately out of reach of
+        your scrolling thumb.
+      </p>
+    </section>
+  </main>
+  <script src="common.js"></script>
+  <script src="onboarding.js"></script>
+</body>
+</html>
